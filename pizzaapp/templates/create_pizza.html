@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block content %}
+<head>
+    <style>
+        /* Add your CSS styles here */
+form {
+    max-width: 400px;
+    margin: 50 auto;
+    padding: 50px;
+    background-color: lightgray; /* Light gray background */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: grey;
+    color: #111;
+}
+
+    </style>
+</head>
+ <!-- create_pizza.html -->
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Order</button>
+</form>
+
+{% endblock %}

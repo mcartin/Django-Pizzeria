@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+<head>
+    <style>
+        .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+/* CSS for the content */
+.content {
+    text-align: center; /* Center the text horizontally */
+}
+
+/* Optional: Adjust the size of the image */
+.pizza-image {
+    width: 400px; /* Adjust the width as needed */
+    height: auto; /* Maintain the aspect ratio */
+}
+    </style>
+</head>
+<div class="container">
+    <div class="content">
+        <h1>Order Confirmation</h1>
+        <h3>Your order has been placed successfully. Thank you!</h3>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrz8f66U-IU8hFujqUeqB06jbkiZ1uVHu8dQ&usqp=CAU" alt="Pizza" class="pizza-image">
+    </div>
+</div>
+{% endblock %}
+

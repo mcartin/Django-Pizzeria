@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<head>
+    <style>
+        .pizza-order {
+            display: block;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: lightgrey;
+        }
+
+        .pizza-image {
+            display: inline;
+            width: 100px; /* Adjust the width of the pizza image */
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .pizza-details {
+            font-size: 25px;
+        }
+        .pizza-order img,
+        .pizza-order .pizza-details {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    {% for p in previous_pizzas %}
+        <div class="pizza-order">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrz8f66U-IU8hFujqUeqB06jbkiZ1uVHu8dQ&usqp=CAU" alt="Pizza" class="pizza-image">
+            <div class="pizza-details">
+                <p>{{ p.size }}<br>{{p.crust}}<br>{{p.sauce}}
+                </p>
+            </div>
+        </div>
+    {% endfor %}
+</body>
+{% endblock %}
